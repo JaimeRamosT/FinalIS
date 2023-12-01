@@ -57,9 +57,6 @@ class Lista_cuentas:
     def agregar_cuenta(self, cuenta):
         self.cuentas.append(cuenta)
     
-    def eliminar_cuenta(self, cuenta):
-        self.cuentas.remove(cuenta)
-    
     def get_cuenta(self, id:str):
         for cuenta in self.cuentas:
             if cuenta.get_id() == id:

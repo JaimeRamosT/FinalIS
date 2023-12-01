@@ -15,18 +15,14 @@ def init_app():
     BD.agregar_cuenta(t_cuenta2)
     BD.agregar_cuenta(t_cuenta3)
 
-    return jsonify({
-        'success': True,
-        'cuentas': BD.mostrar_cuentas()
-    })
+    cuentas = BD.mostrar_cuentas()
+
+    return str(cuentas)
 
 @app.route('/billetera/cuentas', methods=['GET'])
 def get_cuentas():
-    acc = BD.mostrar_cuentas()
-    return jsonify({
-        'success': True,
-        'cuentas': acc
-    })
+    cuentas = BD.mostrar_cuentas()
+    return str(cuentas)
 
 @app.route('/billetera/contactos/<minumero>', methods=['GET'])
 def get_contactos(minumero):

@@ -1,0 +1,26 @@
+Pregunta 3:
+Cambio: 
+- Definir una cantidad máxima que un usuario puede transferir en un día.
+
+Cambios en el código:
+- Clase Cuenta:
+    - Definir un atributo que acumule el total transferido por día (tdiario). 
+    - Crear un método que automáticamente regrese ese valor a 0 en determinada hora, 12:00 am por ejemplo.
+
+- Clase Lista_cuentas:
+    - Modificar el método "transferir", de modo que verifique que el monto de la operación sumado al tdiario 
+      del emisor no supere los 200 soles antes de realizar la transferencia.
+        - Es posible crear un método que haga esta verificación, de modo que solo tenga que ser llamado por 
+          "transferir"
+
+Casos de prueba adicionales:
+- Se tendrían que crear nuevos casos de prueba para la función "pagar". Por ejemplo, pueden crearse para 
+   comprobar que no se supere el límite diario en una sola transacción, que varias transacciones no 
+   superen el límite o combinar casos de error para asegurarse que no se estén creando errores en el 
+   sistema.
+   
+
+Riesgo
+- Como mencioné anteriormente, es posible crear un método nuevo para la clase Lista_cuentas que realize
+  esta verificación, de modo que solo debería ser llamada antes de ejecutar la transferencia. Por lo tanto,
+  no existe un riesgo significativo para el funcionamiento de la aplicación. 
